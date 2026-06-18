@@ -279,7 +279,7 @@ function App() {
           {/* Credentials */}
           <div className="mt-6 flex flex-wrap items-center gap-3">
             <CredentialBadge text="CCNA Certified" />
-            <CredentialBadge text="6× Dean's List — IIUM" />
+            <CredentialBadge text="ISTQB Certified Tester Foundation Level (CTFL) Training" />
           </div>
 
           {/* Availability */}
