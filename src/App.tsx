@@ -1,5 +1,6 @@
 import { memo, useMemo } from "react";
 import Projects from "./components/Projects";
+import ContactForm from "./components/ContactForm";
 
 /* ─────────────────────────────────────────────
    Type Definitions
@@ -353,13 +354,7 @@ function App() {
         >
           <SectionHeader id="contact-heading" title="04 // Contact" />
 
-          {/* ─── PLACEHOLDER: Edit this section ─── */}
-          <div className="border border-dashed border-slate-700 bg-slate-900/20 p-6 sm:p-10">
-            <p className="text-center font-mono text-sm text-slate-500">
-              {/* TODO: Replace this placeholder with your content */}
-              // Your content here — contact form, blog, experience timeline, etc.
-            </p>
-          </div>
+          <ContactForm />
         </section>
 
         {/* ─── Footer ─── */}
