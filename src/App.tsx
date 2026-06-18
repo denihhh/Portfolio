@@ -143,7 +143,7 @@ const SOCIAL_LINKS: readonly SocialLink[] = [
   },
   {
     label: "Email",
-    href: "mailto:your@email.com",
+    href: "mailto:haikaldanish0306@gmail.com",
     icon: <MailIcon />,
   },
 ];
@@ -273,7 +273,7 @@ function App() {
             Name: Danish Haikal
           </p>
           <p className="mt-4 max-w-2xl text-sm leading-relaxed text-slate-400 sm:text-base">
-            Final year IIUM student in Computer Science with specialization in Network Security. 
+            Final year IIUM student in Computer Science with specialization in Network Security.
           </p>
 
           {/* Credentials */}
@@ -318,10 +318,10 @@ function App() {
           {/* About text */}
           <div className="mb-8 border-l-2 border-emerald-400/30 pl-5">
             <p className="text-sm leading-relaxed text-slate-300 sm:text-base">
-              I am an undergraduate student in International Islamic University Malaysia (IIUM), 
-            pursuing a degree in Computer Science with specialization in Network Security. I am passionate about building 
-            efficient and scalable software systems, with a particular interest in 
-            cloud computing and cybersecurity.
+              I am an undergraduate student in International Islamic University Malaysia (IIUM),
+              pursuing a degree in Computer Science with specialization in Network Security. I am passionate about building
+              efficient and scalable software systems, with a particular interest in
+              cloud computing and cybersecurity.
             </p>
           </div>
 
