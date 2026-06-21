@@ -1,5 +1,7 @@
 import { useState, useRef, memo, useCallback } from "react";
 import emailjs from "@emailjs/browser";
+import { motion, AnimatePresence } from "framer-motion";
+import { Send, CheckCircle2, AlertTriangle, Loader2 } from "lucide-react";
 
 /* ─────────────────────────────────────────────
    Configuration — Replace with your EmailJS IDs
@@ -28,90 +30,6 @@ const INITIAL_FORM: FormData = {
   subject: "",
   message: "",
 };
-
-/* ─────────────────────────────────────────────
-   Icons
-   ───────────────────────────────────────────── */
-
-const SendIcon = memo(function SendIcon() {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="16"
-      height="16"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.5"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      aria-hidden="true"
-    >
-      <path d="m22 2-7 20-4-9-9-4Z" />
-      <path d="M22 2 11 13" />
-    </svg>
-  );
-});
-
-const CheckIcon = memo(function CheckIcon() {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="16"
-      height="16"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      aria-hidden="true"
-    >
-      <polyline points="20 6 9 17 4 12" />
-    </svg>
-  );
-});
-
-const AlertIcon = memo(function AlertIcon() {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="16"
-      height="16"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      aria-hidden="true"
-    >
-      <circle cx="12" cy="12" r="10" />
-      <line x1="12" y1="8" x2="12" y2="12" />
-      <line x1="12" y1="16" x2="12.01" y2="16" />
-    </svg>
-  );
-});
-
-const SpinnerIcon = memo(function SpinnerIcon() {
-  return (
-    <svg
-      className="contact-spinner"
-      xmlns="http://www.w3.org/2000/svg"
-      width="16"
-      height="16"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      aria-hidden="true"
-    >
-      <path d="M21 12a9 9 0 1 1-6.219-8.56" />
-    </svg>
-  );
-});
 
 /* ─────────────────────────────────────────────
    Contact Form Component
@@ -175,7 +93,7 @@ function ContactForm() {
           possible.
         </p>
         <div className="contact-email-hint">
-          <span className="contact-email-hint-label">// direct email</span>
+          <span className="contact-email-hint-label">// direct email channel</span>
           <a
             href="mailto:haikaldanish0306@gmail.com"
             className="contact-email-link"
@@ -292,6 +210,7 @@ function ContactForm() {
               placeholder="Tell me about your project, idea, or just say hi..."
               required
               rows={5}
+              maxLength={2000}
               className="contact-input contact-textarea"
             />
           </div>
@@ -300,24 +219,38 @@ function ContactForm() {
           </span>
         </div>
 
-        {/* Status Messages */}
-        {status === "success" && (
-          <div className="contact-status contact-status-success">
-            <CheckIcon />
-            <span>
-              Message sent successfully! I'll get back to you soon.
-            </span>
-          </div>
-        )}
+        {/* Status Messages with slide-in animations */}
+        <AnimatePresence mode="wait">
+          {status === "success" && (
+            <motion.div 
+              key="success-alert"
+              initial={{ opacity: 0, height: 0, y: -10 }}
+              animate={{ opacity: 1, height: "auto", y: 0 }}
+              exit={{ opacity: 0, height: 0, y: -10 }}
+              className="contact-status contact-status-success overflow-hidden"
+            >
+              <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
+              <span>
+                Message sent successfully! I'll get back to you soon.
+              </span>
+            </motion.div>
+          )}
 
-        {status === "error" && (
-          <div className="contact-status contact-status-error">
-            <AlertIcon />
-            <span>
-              Something went wrong. Please try again or email me directly.
-            </span>
-          </div>
-        )}
+          {status === "error" && (
+            <motion.div 
+              key="error-alert"
+              initial={{ opacity: 0, height: 0, y: -10 }}
+              animate={{ opacity: 1, height: "auto", y: 0 }}
+              exit={{ opacity: 0, height: 0, y: -10 }}
+              className="contact-status contact-status-error overflow-hidden"
+            >
+              <AlertTriangle className="w-4 h-4 text-red-400 shrink-0" />
+              <span>
+                Something went wrong. Please try again or email me directly.
+              </span>
+            </motion.div>
+          )}
+        </AnimatePresence>
 
         {/* Submit Button */}
         <button
@@ -327,12 +260,12 @@ function ContactForm() {
         >
           {status === "sending" ? (
             <>
-              <SpinnerIcon />
+              <Loader2 className="w-4 h-4 text-emerald-400 animate-spin" />
               <span>Sending...</span>
             </>
           ) : (
             <>
-              <SendIcon />
+              <Send className="w-4 h-4" />
               <span>Send Message</span>
             </>
           )}
@@ -342,4 +275,4 @@ function ContactForm() {
   );
 }
 
-export default ContactForm;
+export default memo(ContactForm);
