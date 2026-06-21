@@ -19,7 +19,7 @@ Ensure you have [Node.js](https://nodejs.org/) installed (v18+ recommended).
 1. **Clone the Repository:**
    ```bash
    git clone https://github.com/denihhh/Portfolio.git
-   cd Portfolio/my-portfolio
+   cd Portfolio
    ```
 
 2. **Install Dependencies:**
