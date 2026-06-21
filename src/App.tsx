@@ -7,8 +7,6 @@ import {
   Layers, 
   Award, 
   Terminal, 
-  MapPin, 
-  CheckCircle,
   Network
 } from "lucide-react";
 import Projects from "./components/Projects";
