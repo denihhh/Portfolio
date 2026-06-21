@@ -1,36 +1,36 @@
-# 💻 Danish Haikal's Portfolio
+# Danish Haikal's Portfolio
 
 Welcome to the repository for my personal portfolio! This is a modern, responsive, and performance-optimized single-page application showcasing my skills, credentials, projects, and professional background.
 
-🌐 **Live Portfolio:** [https://github.com/denihhh/Portfolio](https://github.com/denihhh/Portfolio)
+**Live Portfolio:** [https://github.com/denihhh/Portfolio](https://github.com/denihhh/Portfolio)
 
 ---
 
-## 👤 About Me
+## About Me
 I am a final-year Computer Science undergraduate student at the **International Islamic University Malaysia (IIUM)** (graduating in 2026 with a **3.61 CGPA**), specializing in **Network Security**. I am passionate about engineering secure, scalable, and low-latency systems at the intersection of software development and cybersecurity.
 
-- ⚡ **Current Role:** Web Developer Intern at Mysoftcare Solution (March 2026 - September 2026)
-- 🎓 **Education:** Bachelor in Computer Science (Hons.) - IIUM
-- 🎖️ **Credentials:** 
+- **Current Role:** Web Developer Intern at Mysoftcare Solution (March 2026 - September 2026)
+- **Education:** Bachelor in Computer Science (Hons.) - IIUM
+- **Credentials:** 
   - **CCNA** (Cisco Certified Network Associate) Certified
   - **ISTQB** Certified Tester Foundation Level (CTFL) Training
 
 ---
 
-## 🛠️ Skills & Capabilities
+## Skills & Capabilities
 
-### ⚙️ Systems & Backend
+### Systems & Backend
 * **Languages & Frameworks:** Rust, Java, Python, Node.js, PHP, Laravel
 
-### 🛡️ Network & Security
+### Network & Security
 * **Core Skills:** Routing & Switching, Enterprise Security, Role-Based Access Control (RBAC), IDOR Mitigation, Wireshark packet analysis
 
-### 📱 Frontend & Mobile
+### Frontend & Mobile
 * **Languages & Frameworks:** TypeScript, React, Flutter, Dart, Tailwind CSS, Firebase
 
 ---
 
-## 🚀 Projects Showcased
+## Projects Showcased
 
 ### 1. **LightJoy** — Web-Based Cloud Gaming Architecture
 * **Tech Stack:** Rust, TypeScript, Moonlight/Sunshine, WebRTC
@@ -52,7 +52,7 @@ I am a final-year Computer Science undergraduate student at the **International 
 
 ---
 
-## 🏗️ Portfolio Tech Stack
+## Portfolio Tech Stack
 
 The portfolio web application is designed with a focus on simplicity, responsiveness, and clean code:
 - **Framework:** [React 19](https://react.dev/) + [Vite](https://vite.dev/)
@@ -62,11 +62,11 @@ The portfolio web application is designed with a focus on simplicity, responsive
 
 ---
 
-## 💻 Local Development
+## Local Development
 
 Follow these steps to set up and run the portfolio locally:
 
-### 📋 Prerequisites
+### Prerequisites
 Ensure you have [Node.js](https://nodejs.org/) installed (v18+ recommended).
 
 ### ⚙️ Setup Instructions
@@ -102,7 +102,7 @@ Ensure you have [Node.js](https://nodejs.org/) installed (v18+ recommended).
 
 ---
 
-## 📬 Contact & Connect
+## Contact & Connect
 
 Feel free to reach out to me for job opportunities, project collaboration, or technical discussions!
 
