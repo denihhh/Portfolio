@@ -134,12 +134,12 @@ const MailIcon = memo(function MailIcon() {
 const SOCIAL_LINKS: readonly SocialLink[] = [
   {
     label: "GitHub",
-    href: "https://github.com/",
+    href: "https://github.com/denihhh",
     icon: <GitHubIcon />,
   },
   {
     label: "LinkedIn",
-    href: "https://linkedin.com/in/",
+    href: "https://www.linkedin.com/in/danish-haikal-mohammad-06a4a1253/",
     icon: <LinkedInIcon />,
   },
   {
@@ -158,7 +158,7 @@ const StatusBadge = memo(function StatusBadge() {
     <div className="inline-flex items-center gap-2 border border-emerald-400/20 bg-emerald-400/5 px-3 py-1.5">
       <span className="animate-pulse-slow h-2 w-2 rounded-full bg-emerald-400" aria-hidden="true" />
       <span className="font-mono text-xs tracking-wide text-emerald-400">
-        Available for Roles From Sept 2026
+        Seeking for job opportunity (Full-time)
       </span>
     </div>
   );
@@ -205,6 +205,44 @@ const SectionHeader = memo<{ id: string; title: string }>(function SectionHeader
         {title}
       </h2>
       <div className="h-px flex-1 bg-slate-800" aria-hidden="true" />
+    </div>
+  );
+});
+
+const Timeline = memo(function Timeline() {
+  return (
+    <div className="mt-8 max-w-xl">
+      <div className="relative border-l border-slate-800/80 pl-6 ml-2 space-y-6">
+        {/* Timeline Item: Bachelor */}
+        <div className="relative group">
+          {/* Dot indicator */}
+          <div className="absolute -left-[31px] top-1.5 h-2 w-2 rounded-full border border-slate-700 bg-slate-950 transition-colors duration-300 group-hover:border-emerald-400/80 group-hover:bg-emerald-400/10" aria-hidden="true" />
+          <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1">
+            <h4 className="font-mono text-xs font-semibold text-slate-200">
+              Bachelor in Computer Science (Hons.)
+            </h4>
+            <span className="font-mono text-[10px] text-slate-500">Graduating 2026</span>
+          </div>
+          <p className="mt-1 font-mono text-[11px] text-slate-400">
+            International Islamic University Malaysia (IIUM) <span className="text-slate-700">&bull;</span> <span className="text-emerald-400/90 font-medium">3.61 CGPA</span>
+          </p>
+        </div>
+
+        {/* Timeline Item: Intern */}
+        <div className="relative group">
+          {/* Dot indicator (active) */}
+          <div className="absolute -left-[31px] top-1.5 h-2 w-2 rounded-full border border-emerald-400 bg-emerald-400 ring-4 ring-emerald-400/15 animate-pulse-slow" aria-hidden="true" />
+          <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1">
+            <h4 className="font-mono text-xs font-semibold text-slate-200">
+              Web Developer Intern
+            </h4>
+            <span className="font-mono text-[10px] text-emerald-400 font-medium">March 2026 - September 2026</span>
+          </div>
+          <p className="mt-1 font-mono text-[11px] text-slate-400">
+            Mysoftcare Solution
+          </p>
+        </div>
+      </div>
     </div>
   );
 });
@@ -265,14 +303,14 @@ function App() {
             </span>
           </div>
 
-          <h1 className="font-mono text-2xl leading-tight font-bold text-slate-50 sm:text-3xl lg:text-4xl">
-            Software Developer
-            <span className="text-emerald-400"> &amp; </span>
-            Network Security
-          </h1>
-          <p className="mt-4 max-w-2xl text-sm leading-relaxed text-slate-400 sm:text-base">
-            Name: Danish Haikal
-          </p>
+          <div className="mt-2 mb-6">
+            <h1 className="text-4xl font-extrabold tracking-tight text-slate-50 sm:text-5xl lg:text-6xl">
+              Danish Haikal
+            </h1>
+            <p className="mt-3 font-mono text-sm tracking-wide text-emerald-400 sm:text-base">
+              &gt; Software Developer &amp; Network Security
+            </p>
+          </div>
           <p className="mt-4 max-w-2xl text-sm leading-relaxed text-slate-400 sm:text-base">
             Final year IIUM student in Computer Science with specialization in Network Security.
           </p>
@@ -287,6 +325,9 @@ function App() {
           <div className="mt-5">
             <StatusBadge />
           </div>
+
+          {/* Timeline */}
+          <Timeline />
 
           {/* Social Links */}
           <div className="mt-6 flex flex-wrap items-center gap-3 sm:mt-8 sm:gap-4">
@@ -361,7 +402,7 @@ function App() {
         <footer className="border-t border-slate-800 pt-8">
           <div className="flex flex-col items-center gap-2 sm:flex-row sm:justify-between">
             <p className="font-mono text-xs text-slate-500">
-              &copy; {currentYear} &mdash; All rights reserved.
+              &copy; {currentYear} &mdash; Danish Haikal Mohammad.
             </p>
             <p className="font-mono text-xs text-slate-600">
               // Built with React + TypeScript
