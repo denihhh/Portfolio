@@ -157,6 +157,22 @@ const ProjectCard = memo<{ project: Project }>(function ProjectCard({
               className="relative z-10 h-full w-auto object-contain transition-transform duration-500 group-hover:scale-[1.03]"
               loading="lazy"
             />
+            
+            {/* Hover overlay button */}
+            {project.repoUrl && (
+              <a
+                href={project.repoUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="absolute inset-0 bg-slate-950/60 backdrop-blur-sm z-30 opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-center justify-center text-xs font-mono font-medium text-emerald-400 border border-emerald-500/10 decoration-transparent"
+              >
+                <div className="flex items-center gap-2 bg-slate-950/80 border border-emerald-500/30 px-4 py-2 rounded shadow-lg shadow-black/40 hover:bg-emerald-500/15 hover:border-emerald-500/50 transition-all transform translate-y-2 group-hover:translate-y-0 duration-300">
+                  <GitHubIcon />
+                  <span>VIEW REPOSITORY</span>
+                </div>
+              </a>
+            )}
+
             <div className="absolute inset-0 bg-gradient-to-t from-slate-950/30 via-transparent to-transparent pointer-events-none z-20" />
           </div>
         )}
